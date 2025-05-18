@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cloud Agent Status</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 30px;
+    }
+    .container {
+      background: #fff;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #0078d4;
+    }
+    .status {
+      margin-top: 20px;
+      background: #e1f3ff;
+      padding: 15px;
+      border-left: 5px solid #0078d4;
+    }
+    .timestamp {
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Agente de Monitoramento - Cloud Agent</h1>
+    <p>Este painel exibe o status do agente ativo em execução na plataforma Azure.</p>
+    <div class="status">
+      Status atual: <strong>Conectado</strong><br>
+      Última atualização: <span id="time"></span>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("time").textContent = new Date().toLocaleString("pt-BR");
+  </script>
+</body>
+</html>
